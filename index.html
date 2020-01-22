@@ -1,0 +1,3209 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <title>ReMarketing</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="js/MockupSlideshow/css/mockup3.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <style>
+        .blackButton {
+            background-color: #000;
+        }
+
+        #congratulationsPopup .modal-body p {
+            font-size: 16px;
+        }
+    </style>
+
+    <div class="modal fade" id="congratulationsPopup">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="min-height: 0;">
+                <div class="modal-header" style="border: 0;">
+                    <h2 class="modal-title">Ура!!!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Вы успешно зарегистрировались на фестиваль, мы свяжемся с вами в ближайшее время.</p>
+                    <p>Не терпится стать спасателем? Жми оплатить и ты станешь еще на один шаг ближе.</p>
+                </div>
+                <div class="modal-footer" style="border: 0;">
+                    <div class="row">
+                        <div class="col-md-3 pull-right" id="paymentForm">
+
+                        </div>
+                        <div class="col-md-3 pull-right">
+                            <button class="custom-button ripple scroll-down" data-dismiss="modal"
+                                onclick="$('#congratulationsPopup').modal('hide');">
+                                Закрыть
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="successPopup">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="min-height: 0;">
+                <div class="modal-header" style="border: 0;">
+                    <h2 class="modal-title">Ура!!!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Вы настоящий спасатель, мы свяжемся с вами в ближайшее время.</p>
+                </div>
+                <div class="modal-footer" style="border: 0;">
+                    <div class="row">
+                        <div class="col-md-3 pull-right">
+                            <a href="#" data-dismiss="modal" onclick="$('#congratulationsPopup').modal('hide');"
+                                class="custom-button ripple scroll-down" style="display: block;text-align: center;">
+                                Закрыть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="header__logoBlock hidden-xs hidden-sm col-md-3 col-lg-4">
+                    <a class="scroll-down" href=".orange-angle">
+                        <img src="images/svg-png/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="header__nav col-md-7 col-lg-6">
+                    <nav class="navbar">
+                        <div class="navbar-header">
+
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#main_menu" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <a class="navbar-brand scroll-down hidden-md hidden-lg" href=".orange-angle">
+                                <img src="images/svg-png/header-white-logo.png">
+                            </a>
+
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="main_menu">
+                            <ul>
+                                <li class="header__nav__li"><a class="scroll-down" href=".main-section">О ФЕСТИВАЛЕ</a>
+                                </li>
+                                <li class="header__nav__li"><a class="scroll-down" href=".speakers">СПИКЕРЫ</a></li>
+                                <li class="header__nav__li"><a class="scroll-down" href=".program">ПРОГРАММА</a></li>
+                                <li class="header__nav__li"><a class="scroll-down" href=".save-your-brand">ЦЕНА</a></li>
+                                <li class="header__nav__li"><a class="scroll-down" href=".registration">РЕГИСТРАЦИЯ</a>
+                                </li>
+                                <li class="header__nav__li"><a class="scroll-down" href=".footer">КОНТАКТЫ</a></li>
+                            </ul>
+
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+
+                <div class="header__help hidden-xs hidden-sm col-md-2">
+                    <button class="custom-button ripple scroll-down" href=".registration">
+                        ПОМОЧЬ
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Header End -->
+
+    <!-- Content -->
+
+    <div class="content">
+
+        <div class="angle-block">
+            <div class="container">
+                <div class="row">
+
+                    <div class="orange-angle">
+                        <div class="angle"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--  === MAIN BANNER ===  -->
+
+        <figure class="main-Banner">
+
+            <div class="prev">
+                <div class="arrow-down">
+                    <div class="square-left"></div>
+                    <i class="arrow"></i>
+                    <div class="square-right"></div>
+                </div>
+            </div>
+            <div class="next">
+                <div class="arrow-down">
+                    <div class="square-left"></div>
+                    <i class="arrow"></i>
+                    <div class="square-right"></div>
+                </div>
+            </div>
+
+            <div id="wrap" class="wrap">
+                <div id="mobile" class="mobile">
+                    <ul id="slideshow" class="slideshow">
+
+                        <!--<li class="slideshow__item"><img src="images/carousel-item.png" alt=""></li>-->
+
+                        <li class="slideshow__item"><img src="images/morozhenko.jpg" alt=""></li>
+
+                        <li class="slideshow__item"><img src="images/photo_3.jpg" alt=""></li>
+
+                        <li class="slideshow__item"><img src="images/svg-png/Bottle_1920x1080.jpg" alt=""></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </figure>
+
+
+        <!--  === TOP PARTNERS ===  -->
+
+        <div class="hidden-xs top-partners-row">
+            <div class="grey-background"></div>
+            <div class="container">
+                <div class="row row-flex">
+
+                    <div class="top-partner col-xs-6 col-sm-2">
+                        <a href="http://bbdo.ua/">
+                            <div class="top-partner__img">
+                                <img src="images/svg-png/BBDO_logo.jpg" alt="">
+                            </div>
+                            <div class="top-partner__name">
+                                креативный партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-partner col-xs-6 col-sm-2">
+                        <a href="http://www.yaposhka.kh.ua/">
+                            <div class="top-partner__img">
+                                <img src="images/svg-png/footer_Yaposhka.png" alt="">
+                            </div>
+                            <div class="top-partner__name">
+                                генеральный партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-partner col-xs-6 col-sm-2">
+                        <a href="https://klmgroup.com.ua/">
+                            <div class="top-partner__img">
+                                <img src="images/svg-png/footer_Leading.png" alt="">
+                            </div>
+                            <div class="top-partner__name">
+                                организатор
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-partner col-xs-6 col-sm-2">
+                        <a href="http://gladhead.com/">
+                            <div class="top-partner__img">
+                                <img src="images/svg-png/footer_GleadHead.png" alt="">
+                            </div>
+                            <div class="top-partner__name">
+                                дизайн партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-partner col-xs-12 col-sm-2">
+                        <a href="http://www.studiomarka.com/">
+                            <div class="top-partner__img">
+                                <img src="images/svg-png/footer_Marka.png" alt="">
+                            </div>
+                            <div class="top-partner__name">
+                                диджитал партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-partner col-xs-12 col-sm-2">
+                        <a href="http://www.zebra.kh.ua/">
+                            <div class="top-partner__img">
+                                <img src="images/svg-png/zebra.png" alt="">
+                            </div>
+                            <div class="top-partner__name">
+                                генеральный полиграфический партнер
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--  === ABOUT ===  -->
+
+        <main class="main-section">
+
+            <div class="main-top">
+
+                <div class="container">
+                    <div class="row row-flex">
+
+                        <div class="hidden-xs col-sm-4 col-md-3">
+
+                            <div class="ice-cream-img"> <img src="images/svg-png/ice-cream.png" alt=""> </div>
+
+                        </div>
+
+                        <div class="about col-xs-12 col-sm-8 col-md-9">
+
+                            <h1> REMARKETING </h1>
+
+                            <div class="sub-title"> стань спасателем брендов </div>
+
+                            <h1> 2 ноября 2017<br>
+                                Premier Palace Hotel Kharkiv</h1>
+
+                            <p><br>
+                                Пока ты сидел в фейсбуке и медленно, но уверенно забывал все, что тебе рассказали <br />
+                                на предыдущем Re, ты перестал замечать одну очень важную вещь. Твоему бренду
+                                больно.<br />
+                                Он страдает от крутости других и не может выбраться с маркетингового дна. С каждым
+                                <br />
+                                днем он все больше нуждается в твоей помощи. Настало время для активных действий. <br />
+                                <span> Помоги своему бренду – приди на XI Remarketing! </span>
+                            </p>
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="main-bottom">
+
+                <div class="container">
+                    <div class="row row-flex">
+
+                        <div class="can-be-block col-xs-12 col-sm-8 col-sm-offset-4 col-md-offset-4">
+
+                            <div class="can-be-rescuer">
+                                СПАСИ СВОЙ БРЕНД,<br>ЕСЛИ ТЫ
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9 col-md-7">
+                            <div class="problems-list">
+                                <ul>
+                                    <li>Маркетолог, а у твоей компании падают продажи;</li>
+                                    <li>PR-менеджер, а твой бренд тонет в негативе;</li>
+                                    <li>Рекламист, а твой рекламный бюджет прогорел;</li>
+                                    <li>Web-специалист, а твоё SEO не оптимизирует;</li>
+                                    <li>Бренд-менеджер, а твой бренд страдает;</li>
+                                    <li>Бизнесмен, а твой бизнес терпит крушение;</li>
+                                    <li>SMM-специалист, а твои группы атакуют боты.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-5">
+                            <div class="badge-img">
+                                <img src="images/svg-png/badge.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!--  === SPEAKERS ===  -->
+
+        <section class="speakers">
+
+            <div class="speakers-block">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="section-name col-md-offset-2 col-lg-offset-3 col-sm-8 col-md-9">
+                            <h2>HEADLINERS</h2>
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">партнер бренд-бутика Тень</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Имеет множество званий и наград. С осени 2006 г.
+                                        занимал должность вице-президента по маркетингу Национальной
+                                        Телекомпании Украины. В 2008 году был приглашен на должность
+                                        заместителя генерального директора в медиа-холдинг РБК Украина.
+                                        С 2010 года открывает независимую маркетинговую практику
+                                        и успешно ведет компании украинского и международного бизнеса.
+                                        Занимаясь в том числе и политическим маркетингом, он
+                                        работает с известнейшими украинскими политиками и бизнесменами.<br /><br />
+
+                                        В 2013 году основал закрытое агентство SUPERAGENSTVO,
+                                        специализирующееся на Intelligent marketing и продажах на
+                                        сложных конкурентных рынках.
+                                        В 2014 году открыл бюро по производству презентаций
+                                        Super Intelligent Presentations.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Партнер DYB | Develop Your Business</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Имеет множество званий и наград. С осени 2006 г.
+                                        занимал должность вице-президента по маркетингу Национальной
+                                        Телекомпании Украины. В 2008 году был приглашен на должность
+                                        заместителя генерального директора в медиа-холдинг РБК Украина.
+                                        С 2010 года открывает независимую маркетинговую практику
+                                        и успешно ведет компании украинского и международного бизнеса.
+                                        Занимаясь в том числе и политическим маркетингом, он
+                                        работает с известнейшими украинскими политиками и бизнесменами.<br /><br />
+
+                                        В 2013 году основал закрытое агентство SUPERAGENSTVO,
+                                        специализирующееся на Intelligent marketing и продажах на
+                                        сложных конкурентных рынках.
+                                        В 2014 году открыл бюро по производству презентаций
+                                        Super Intelligent Presentations.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Известный маркетолог, владелец маркетинговой компании
+                                    "Rozenfeld Office"</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Имеет множество званий и наград. С осени 2006 г.
+                                        занимал должность вице-президента по маркетингу Национальной
+                                        Телекомпании Украины. В 2008 году был приглашен на должность
+                                        заместителя генерального директора в медиа-холдинг РБК Украина.
+                                        С 2010 года открывает независимую маркетинговую практику
+                                        и успешно ведет компании украинского и международного бизнеса.
+                                        Занимаясь в том числе и политическим маркетингом, он
+                                        работает с известнейшими украинскими политиками и бизнесменами.<br /><br />
+
+                                        В 2013 году основал закрытое агентство SUPERAGENSTVO,
+                                        специализирующееся на Intelligent marketing и продажах на
+                                        сложных конкурентных рынках.
+                                        В 2014 году открыл бюро по производству презентаций
+                                        Super Intelligent Presentations.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Известный маркетолог</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Имеет множество званий и наград. С осени 2006 г.
+                                        занимал должность вице-президента по маркетингу Национальной
+                                        Телекомпании Украины. В 2008 году был приглашен на должность
+                                        заместителя генерального директора в медиа-холдинг РБК Украина.
+                                        С 2010 года открывает независимую маркетинговую практику
+                                        и успешно ведет компании украинского и международного бизнеса.
+                                        Занимаясь в том числе и политическим маркетингом, он
+                                        работает с известнейшими украинскими политиками и бизнесменами.<br /><br />
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="arrow-orange">
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--  == STRATEGIC MARKETING ==  -->
+
+
+            <div class="speakers-block">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="section-name col-md-offset-2 col-lg-offset-3 col-sm-8 col-md-9">
+                            <h2>STRATEGIC MARKETING</h2>
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Руководитель школы предпринимательства K.Fund</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Кандидат економічних наук, доцент кафедри міжнародної економіки
+                                        та маркетингу Київського національного університету імені Тараса
+                                        Шевченка, Міжнародного інституту бізнесу, сертифікований викладач
+                                        Чартерного інституту маркетингу (CIM, Chartered Institute of Marketing,
+                                        Великобританія), керівник Школи малого і середнього підприємництва у K.Fund.
+                                        <br />
+                                        Має диплом Чартерного інституту маркетингу, CIM Professional Diploma in
+                                        Marketing.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">директор по маркетингу сети кинотеатров “Планета Кино”</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Маркетолог с двадцатилетним опытом работы в маркетинге и коммуникациях.
+                                        Имеет опыт разработки и реализации эффективных маркетинговых стратегий,
+                                        управления национальными и международными брендами, выстраивания стабильных
+                                        и доверительных отношений с клиентами.<br /><br />
+
+                                        Большую часть профессионального опыта получил, работая в крупнейших украинских
+                                        телеком- и IT-компаниях (UMC/MTS, Astelit, Volia, Microsoft, Softline Group),
+                                        а также FMCG-компаниях на разных ролях, начиная от бренд/групп-бренд менеджера,
+                                        эксперта по маркетинговым коммуникациям и заканчивая руководителем
+                                        подразделения.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Харьков</div>
+
+                                <div class="speaker-status"> Бренд-стратег, учредитель и руководитель брендингового
+                                    агентства Boomerang.</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Бренд-стратег, учредитель и руководитель брендингового агентства Boomerang.
+                                        <br /><br />
+
+                                        Также является организатором и бизнес-тренером в школе эффективного
+                                        маркетинга Boomerang School, членом Ассоциации Дизайнеров-графиков 4-й Блок.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Львов</div>
+
+                                <div class="speaker-status">Журналист, шеф-редактор Медиа-группы "ДОЗОРЫ",
+                                    политтехнолог, медиа-консультант</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Харьков</div>
+
+                                <div class="speaker-status">Создатель и владелец бренда DE ESSE</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Одесса</div>
+
+                                <div class="speaker-status">PR директор SOLAR Digital</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="arrow-orange">
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- == ADVERTISING & DESIGN == -->
+
+            <div class="speakers-block">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="section-name col-md-offset-2 col-lg-offset-3 col-sm-8 col-md-9">
+                            <h2>ADVERTISING & PR</h2>
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Креативный директор и владелец BART&FINK</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Креативный директор и владелец BART&FINK<br>
+                                        Обладатель гран-при EFFIE и самый крутой креативный директор по версии Ярослава
+                                        Сердюка. Что тут еще добавить? Да, он действительно самый крутой креативный
+                                        директор. Вы на фотку его посмотрите
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Днепр</div>
+
+                                <div class="speaker-status">Креативный директор ПриватБанка</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Руководитель направления по связям с общественностью
+                                    компании ВОЛЯ</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Руководитель направления по связям с общественностью компании ВОЛЯ<br />
+                                        PR аngel, пиарщик #полюбви.<br /><br />
+                                        Живет в фейсбуке, работает в ВОЛЕ.<br /><br />
+                                        С 2013 года поглощена коммуникациями, работала на украинском и зарубежных рынках
+                                        в сфере ритейла, организации мероприятий, b2b сегмента, знает как организовать
+                                        мероприятие в Дубае по Skype, как влюбить в себя журналистов и почему в пиаре
+                                        важны цифры.<br /><br />
+                                        Telecom girl, которая выбирает для работы сложные проекты, потому что уверена,
+                                        что конкуренция дает настоящий драйв.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Директор по стратегии и совладелец banda.agency</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Директор по стратегии и совладелец креативного агентства <a
+                                            href="http://banda.agency/">banda.agency</a>.<br /><br />
+
+                                        Самый титулованный рекламист Украины* по версии его мамы.
+                                        За свою карьеру в рекламе получил более 200 международных
+                                        наград. В 2012 banda.agency вошло в пятерку самых эффективных
+                                        независимых рекламных агентств в мире по результатам престижной
+                                        премии Effie Awards. В 2014 и 2015 годах banda.agency дважды
+                                        удостаивалось титула самого креативного агентства Украины.
+                                        Ярослав преподает в Киевской Академии Медиа Искусств, Институте
+                                        журналистики, является постоянным спикером на форумах, связанных
+                                        с рекламой и маркетингом. Входит в состав Art Directors Club Ukraine,
+                                        неоднократно состоял в жюри международных фестивалей рекламы, среди
+                                        которых Effie Awards, Golden Hammer, КМФР.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status"> создатель и продюсер Moon Studio production</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Главный редактор онлайн-издания moonstore.it
+                                        Начинал продюсирование в 2013 году, за это время успел поработать с такими
+                                        брендами, как Chanel, Pal Zileri, Dior, BMW, ISAIA, IQOS, Klitschko Foundation,
+                                        Gara и
+                                        др.<br />
+                                        Официальный медиапартнер на мероприятиях: Венецианский Кинофестиваль, гала-
+                                        ужин бренда IWC в Женеве, выставка фотографий Карла Лагерфельда во Флоренции,
+                                        Pitti Uomo.<br />
+                                        Основной посыл, который он несет в массы - “Я хочу, чтобы этот мир стал
+                                        красивее”.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Харьков</div>
+
+                                <div class="speaker-status">Креативный директор и основатель агентства "One shot"</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        - преподаватель ХНУ им. Каразина;<br />
+                                        - преподаватель образовательного пространства "Гравитация";<br />
+                                        - лектор в IDP Business space;<br />
+                                        - спикер образовательного проекта «Профориентация»<br /><br />
+
+                                        Портфолио клиентов: сеть фитнес клубов Сафари, музей научных открытий WOOM, GARA
+                                        shop, образовательное пространство Гравитация, Smilefood, тир Сафари
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="arrow-orange">
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- == INTERNET-MARKETING == -->
+
+            <div class="speakers-block">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="section-name col-md-offset-2 col-lg-offset-3 col-sm-8 col-md-9">
+                            <h2>INTERNET-MARKETING</h2>
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">SMM Group Head в 1+1</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        В SMM и digital уже более 3х лет. За плечами опыт работы с Nestle,
+                                        Heineken, Garnier, Rowenta, Inkerman, Lillet, и другими брендами.
+                                        Больше двух лет работала в digital-агентствах, последнее из которых
+                                        — Liquid 7 (Agama Digital Group), самое эффективное агентство в
+                                        Украине (по версии EFFIE Awards 2016-2017гг.) До недавнего времени
+                                        работала в Укрпоште в эпоху перемен :) Сегодня — SMM head в 1+1 медиа.
+                                    </p>
+
+                                    <!--<div class="them">-->
+                                    <!--бла бла бла-->
+                                    <!--</div>-->
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Управляющий партнер digital-агентства Smartica/Skykillers
+                                </div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Управляющий партнер digital-агентства Smartica/Skykillers, основатель и партнер
+                                        интернет-медиа агентства Qreachers. Номер 3 в рейтинге эффективности
+                                        Digital-агентств 2016 года.
+                                        В маркетинговых коммуникациях 15 лет, из них уже более 8 лет - в цифровом
+                                        маркетинге.
+                                        Начинал карьеру ассистентом аккаунт-менеджера. Прошел путь от создания нового
+                                        агентства к выведению его в лидеры рынка. Клиенты агентств представлены в
+                                        Украине, Казахстане и Англии.
+                                        На данный момент занимается стратегическим развитием цифровых сервисов и медиа в
+                                        агентских бизнесах.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Account Director DA Postmen</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Account Director DA Postmen<br />
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Директор по маркетингу и развитию продуктов в Omnicore</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        Директор по маркетингу и развитию продуктов в Omnicore<br />
+                                        Преподаватель Digital Marketing для Ecommerce в КАМА. Более 5 лет опыта запуска
+                                        и развития ecommerce проектов для крупных fashion-ритейлеров.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">Chief Digital Officer в ADV Group Ukraine</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        В сфере digital работает более 9-ти лет.
+                                        В ADV Group Ukraine занимается развитием digital компетенции в агентствах Группы
+                                        (Havas Media
+                                        Ukraine, Initiative, Universal McCann, THINKMcCANN, FCB Kyiv), разработкой
+                                        digital стратегии для
+                                        ключевых клиентов компании, предоставлением технической экспертизы,
+                                        отслеживанием
+                                        изменений ситуации в digital-медиа.
+                                        Работала с такими клиентами как Coca-Cola, AVON, lifecell, SUN InBev Ukraine и
+                                        др.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="speaker-card col-sm-6 col-md-3">
+
+                            <figure class="speaker-photo effect-julia">
+                                <img src="images/speaker.png" alt="">
+
+                                <figcaption>
+                                    <div>
+                                        <p>узнать больше информации</p>
+                                        <p>об этом спикере</p>
+                                    </div>
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="speaker-desc">
+
+                                <div class="speaker-name">Иван Иванов, Киев</div>
+
+                                <div class="speaker-status">New Business Director в стратегическом агентстве цифрового
+                                    маркетинга AIMBULANCE</div>
+
+                                <div class="for-modal">
+
+                                    <p>
+                                        New Business Director в стратегическом агентстве цифрового маркетинга AIMBULANCE
+                                        <br><br>
+                                        Клиенты принимают решение о сотрудничестве с агентством на основе стратегии и
+                                        подхода, которые разрабатывает с командой агентства «нью-биз». Поэтому в работе
+                                        Ольги важное место занимают понимание всех процессов агентства, а также навыки
+                                        ведения переговоров. За 5 лет в AIMBULANCE, она поработала с такими клиентами
+                                        как Unilever, PepsiCo, Danone, BNP Paribas Group, Метінвест, Fozzy group и
+                                        Mondelez.
+                                        <br><br>
+                                        AIMBULANCE — трижды самое эффективное digital агентство года по версии Effie
+                                        Awards Ukraine. №1 по исследованиям Advertiser’s Choice и рейтинга «Digital
+                                        агентство года» в 2014, 2015 и 2016 годах.
+                                        <br>В 2014 году AIMBULANCE разработало брендинг и визуальный стиль для
+                                        Ивано-Франковска. Эта работа вошла в финал Cannes Lions.
+
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="arrow-orange">
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade speaker_modal" id="speaker_modal" tabindex="-1" role="dialog"
+                aria-labelledby="speaker_modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="close" data-dismiss="modal" aria-label="Close">
+                            <div class="close-square-top-left"></div>
+                            <div class="close-square-top-right"></div>
+                            <div class="cross">
+                                <span class="close-line"></span>
+                                <span class="close-line"></span>
+                            </div>
+                            <div class="close-square-bottom-left"></div>
+                            <div class="close-square-bottom-right"></div>
+                        </div>
+
+                        <div class="modal-photo">
+
+                            <div class="modal-decoration-lines-top">
+                                <div class="one-line"></div>
+                                <div class="one-line"></div>
+                            </div>
+
+                            <div class="modal-photo-img">
+                                <img src="images/modal_speaker.png" alt="">
+
+                            </div>
+
+                            <div class="arrows-white">
+
+                                <div class="arrow-down">
+
+                                    <div class="square-left"></div>
+
+                                    <i class="arrow"></i>
+
+                                    <div class="square-right"></div>
+
+                                </div>
+
+                                <div class="arrow-down">
+
+                                    <div class="square-left"></div>
+
+                                    <i class="arrow"></i>
+
+                                    <div class="square-right"></div>
+
+                                </div>
+
+                                <div class="arrow-down">
+
+                                    <div class="square-left"></div>
+
+                                    <i class="arrow"></i>
+
+                                    <div class="square-right"></div>
+
+                                </div>
+
+                                <div class="arrow-down">
+
+                                    <div class="square-left"></div>
+
+                                    <i class="arrow"></i>
+
+                                    <div class="square-right"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-desc">
+
+                            <h2>ИМЯ СПИКЕРА</h2>
+
+                            <p>
+                                подробная информация о спикере
+                            </p>
+
+                            <!--<div class="them">-->
+                            <!--Тема: нет темы-->
+                            <!--</div>-->
+
+                        </div>
+
+                        <div class="modal-decoration-lines-bottom">
+                            <div class="one-line"></div>
+                            <div class="one-line"></div>
+                        </div>
+
+                        <div class="modal-decoration-line-horizontal"></div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal END -->
+
+        </section>
+
+
+        <!-- === PROGRAM === -->
+
+
+        <section class="program">
+            <div class="container">
+                <div class="program-content">
+
+                    <div class="parallelogram"></div>
+
+                    <div class="row">
+
+                        <div class="section-name col-md-offset-2 col-lg-offset-3 col-sm-8 col-md-9">
+                            <h2>PROGRAM</h2>
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>08:00</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                                <div class="time-item__title col-xs-8 col-sm-3 col-md-2">
+
+                                    <h5>РЕГИСТРАЦИЯ</h5>
+
+                                </div>
+
+                                <div class="time-item__desc hidden-xs col-sm-5 col-md-7">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>09:00</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                                <div class="time-item__title col-xs-8 col-sm-3 col-md-2">
+
+                                    <h5>ОТКРЫТИЕ ФЕСТИВАЛЯ</h5>
+
+                                </div>
+
+                                <div class="time-item__desc hidden-xs col-sm-5 col-md-7">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>09:15</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-photo"></div>
+
+                                </div>
+
+                                <div class="time-item__photo col-xs-8 col-sm-3 col-md-2">
+
+                                    <div class="time-line for-photo"></div>
+
+                                    <img src="images/speaker.png" alt="">
+
+                                </div>
+
+                                <div class="col-xs-4 visible-xs"></div>
+
+                                <div class="time-item__desc col-xs-8 col-sm-5 col-md-7">
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">Владелец маркетинговой компании "Rozenfeld Office"</div>
+
+                                    <div class="speaker-credo">
+                                        Парадоксы потребительского мышления
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-photo">10:15</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-photo"></div>
+
+                                </div>
+
+                                <div class="time-item__photo col-xs-8 col-sm-3 col-md-2">
+
+                                    <div class="time-line for-photo"></div>
+
+                                    <img src="images/speaker.png" alt="">
+
+                                </div>
+
+                                <div class="col-xs-4 visible-xs"></div>
+
+                                <div class="time-item__desc col-xs-8 col-sm-5 col-md-7">
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">Партнер бренд-бутика Тень</div>
+
+                                    <div class="speaker-credo">
+                                        Как из торговой марки сделать бренд
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>11:00</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                                <div class="time-item__title col-xs-8 col-sm-3 col-md-2">
+
+                                    <h5>КОФЕ-БРЕЙК</h5>
+
+                                </div>
+
+                                <div class="time-item__desc hidden-xs col-sm-5 col-md-7">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-photo">11:15</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-photo"></div>
+
+                                </div>
+
+                                <div class="time-item__photo col-xs-8 col-sm-3 col-md-2">
+
+                                    <div class="time-line for-photo"></div>
+
+                                    <img src="images/speaker.png" alt="">
+
+                                </div>
+
+                                <div class="col-xs-4 visible-xs"></div>
+
+                                <div class="time-item__desc col-xs-8 col-sm-5 col-md-7">
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">Партнер DYB | Develop Your Business</div>
+
+                                    <div class="speaker-credo">
+                                        Технологичность + Культура = ДНК компании
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>12:15</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                                <div class="time-item__title col-xs-8 col-sm-3 col-md-2">
+
+                                    <h5>ТОК-ШОУ</h5>
+
+                                </div>
+
+                                <div class="time-item__desc hidden-xs col-sm-5 col-md-7">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>13:00</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                                <div class="time-item__title col-xs-8 col-sm-3 col-md-2">
+
+                                    <h5>ОБЕД</h5>
+
+                                </div>
+
+                                <div class="time-item__desc hidden-xs col-sm-5 col-md-7">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time>14:00</time>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                                <div class="time-item__title col-xs-8 col-sm-3 col-md-2">
+
+                                    <h5>НАЧАЛО РАБОТЫ СЕКЦИЙ</h5>
+
+                                </div>
+
+                                <div class="time-item__desc hidden-xs col-sm-5 col-md-7">
+
+                                    <div class="time-line"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="vertical-line visible-sm"></div>
+
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-card">14:00</time>
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-card"></div>
+
+                                </div>
+
+                                <div class="time-item__speaker-card col-xs-8 col-md-3">
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title">
+                                        INTERNET-<br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Директор по маркетингу и развитию продуктов в Omnicore
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Digital-инструменты офлайн продаж
+                                    </div>
+
+                                </div>
+
+                                <!--                             ==============-->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title">
+                                        ADVERTISING <br class="hidden-sm hidden-xs" />
+                                        & PR
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Собственник и креативный директор BART and FINK
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Принцип Стаута-Лори или револяция в рекламной эффективности 2017
+                                    </div>
+
+
+                                </div>
+
+                                <!--                             ===========-->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title">
+                                        STRATEGIC <br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Директор по маркетингу сети кинотеатров “Планета Кино”
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        От продажи продукта к продвижению бренда. Роль бренда в сервисной компании
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="vertical-line visible-sm"></div>
+
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-card">14:45</time>
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-card"></div>
+
+                                </div>
+
+                                <div class="time-item__speaker-card col-xs-8 col-md-3">
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        INTERNET-<br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        SMM Group Head в 1+1
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Ситуативный SMM: как ньюсджекинг увеличивает лояльность клиентов. Кейс Укрпошты
+                                    </div>
+
+                                </div>
+
+                                <!--                             ============== -->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        ADVERTISING <br class="hidden-sm hidden-xs" />
+                                        & PR
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Директор по стратегии и совладелец banda.agency
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        10 привычек сильного (как Халк Хоган) бренда
+                                    </div>
+
+
+                                </div>
+
+                                <!--                             =========== -->
+
+                                <div class="col-sm-4 visible-sm"></div>
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        STRATEGIC <br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        PR директор SOLAR Digital
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Digital-cтратегия в маркетинге
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="vertical-line visible-sm"></div>
+
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-card">15:30</time>
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-card"></div>
+
+                                </div>
+
+                                <div class="time-item__speaker-card col-xs-8 col-md-3">
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        INTERNET-<br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Управляющий партнер digital-агентства Smartica/Skykillers
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Как выжить брендам в эпоху цифровых инноваций: баланс стратегии и креатива
+                                    </div>
+
+                                </div>
+
+                                <!--                             ============== -->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        ADVERTISING <br class="hidden-sm hidden-xs" />
+                                        & PR
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Руководитель направления связей с общественностью компании ВОЛЯ
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Love is… PR + Digital
+                                    </div>
+
+
+                                </div>
+
+                                <!--                             =========== -->
+
+                                <div class="col-sm-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        STRATEGIC <br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Руководитель школы предпринимательства K.Fund
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Маркетинг в современных реалиях
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="vertical-line visible-sm"></div>
+
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-card">16:15</time>
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-card"></div>
+
+                                </div>
+
+                                <div class="time-item__speaker-card col-xs-8 col-md-3">
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        INTERNET-<br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        New Business Director в Aimbulance
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Ваш функционал в порядке, только им никто не пользуется
+                                    </div>
+
+                                </div>
+
+                                <!--                             ============== -->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        ADVERTISING <br class="hidden-sm hidden-xs" />
+                                        & PR
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        создатель и продюсер Moon Studio production
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Как не слиться с ежедневным медиа-шумом
+                                    </div>
+
+
+                                </div>
+
+                                <!--                             =========== -->
+
+                                <div class="col-sm-4 visible-sm"></div>
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        STRATEGIC <br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Журналист, шеф-редактор Медиа-группы "ДОЗОРЫ", политтехнолог, медиа-консультант
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Facebook за решеткой, Саакашвили на границе и #львівське_сміття. Только свежие
+                                        кейсы, только хардкор
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="vertical-line visible-sm"></div>
+
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-card">17:00</time>
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-card"></div>
+
+                                </div>
+
+                                <div class="time-item__speaker-card col-xs-8 col-md-3">
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        INTERNET-<br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Chief Digital Officer в ADV Group Ukraine
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        TV+digital=frenemies
+                                    </div>
+
+                                </div>
+
+                                <!--                             ============== -->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        ADVERTISING <br class="hidden-sm hidden-xs" />
+                                        & PR
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Креативный директор "One Shot creative agency"
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Стратегия коммуникаций или почему Огилви переворачивается в гробу
+                                    </div>
+
+
+                                </div>
+
+                                <!--                             =========== -->
+
+                                <div class="col-sm-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        STRATEGIC <br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Бренд-стратег, учредитель и руководитель брендингового агентства Boomerang
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Спасет ли ребрендинг твой бренд?
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <!--time-item-->
+
+                        <div class="time-item col-xs-12">
+
+                            <div class="vertical-line visible-sm"></div>
+
+
+                            <div class="row row-flex">
+
+                                <div class="time-item__time col-xs-2 col-md-1">
+
+                                    <time class="for-card">17:45</time>
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                </div>
+
+                                <div class="time-item__line col-xs-2">
+
+                                    <div class="time-line for-card"></div>
+
+                                </div>
+
+                                <div class="time-item__speaker-card col-xs-8 col-md-3">
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        INTERNET-<br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Account Director DA Postmen
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Почему ваши TV commercials не взлетают в online
+                                    </div>
+
+                                </div>
+
+                                <!--                             ============== -->
+
+                                <div class="col-xs-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        ADVERTISING <br class="hidden-sm hidden-xs" />
+                                        & PR
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        ПриватБанк
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Тех-маркетинг и панк-маркетинг
+                                    </div>
+
+
+                                </div>
+
+                                <!--                             =========== -->
+
+                                <div class="col-sm-4 visible-sm"></div>
+
+
+                                <div class="time-item__speaker-card col-xs-12 col-sm-8 col-md-3">
+
+                                    <div class="vertical-line visible-xs"></div>
+
+                                    <div class="time-line for-card"></div>
+
+                                    <div class="time-item_big-title pseudo">
+                                        STRATEGIC <br class="hidden-sm hidden-xs" />
+                                        MARKETING
+                                    </div>
+
+                                    <div class="time-item__photo">
+
+                                        <img src="images/speaker.png" alt="">
+
+                                    </div>
+
+                                    <div class="speaker-name">ИВАН ИВАНОВ</div>
+
+                                    <div class="speaker-status">
+                                        Создатель и владелец бренда DE ESSE
+                                    </div>
+
+                                    <div class="speaker-credo">
+                                        Стратегия создания успешного бренда
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="arrow-orange">
+
+                            <div class="arrow-down">
+
+                                <div class="square-left"></div>
+
+                                <i class="arrow"></i>
+
+                                <div class="square-right"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- === SAVE YOUR BRAND === -->
+
+
+        <section class="save-your-brand">
+
+            <div class="save-top">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-9">
+
+                            <div class="section-title">
+
+                                <h2>СПАСИ СВОЙ БРЕНД</h2>
+
+                                <div class="sub-title">купи билет и стань спасателем брендов</div>
+
+                            </div>
+
+                            <div class="date-price">
+
+                                <div class="date-price__item">
+
+                                    <div class="date">до 11.10 </div>
+
+                                    <div class="price">750</div>
+
+                                </div>
+
+                                <div class="date-price__item">
+
+                                    <div class="date">до 25.10 </div>
+
+                                    <div class="price">850</div>
+
+                                </div>
+
+                                <div class="date-price__item">
+
+                                    <div class="date">до 01.11 </div>
+
+                                    <div class="price">950</div>
+
+                                </div>
+
+                                <div class="date-price__item">
+
+                                    <div class="date">до 02.11 </div>
+
+                                    <div class="price">1 200</div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="buy-ticket">
+
+                                <a class="scroll-down ripple" href=".registration">КУПИТЬ БИЛЕТ</a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="milk-img hidden-xs col-sm-3">
+
+                            <img src="images/svg-png/sad_milk.png" alt="">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="save-bottom">
+
+                <div class="container">
+
+
+                    <div class="row row-flex">
+
+                        <div class="cookie-left col-xs-12 col-sm-4 col-md-3 col-lg-5">
+
+                            <div class="cookie-img"><img src="images/svg-png/cookies.png" alt=""> </div>
+
+                        </div>
+
+                        <div class="cookie-right col-sm-8 col-md-9 col-lg-7">
+
+                            <div class="section-title">
+
+                                <div class="title">ПЕЧЕНЬКИ</div>
+
+                                <div class="sub-title">для отважных спасателей</div>
+
+                                <div class="saver-list">
+
+                                    <ol>
+
+                                        <li>
+
+                                            <div class="li-content">
+                                                <h4> ПОКАЖИ, ЧТО ТЫ ГОТОВ СПАСТИ СВОЙ БРЕНД </h4>
+
+                                                Сфотографируй себя в образе спасателя и опубликуй в Facebook или
+                                                Instagram
+                                                фото под хэштегом #спасательбрендов. Каждому участнику – скидка 10%,
+                                                автору
+                                                самого креативного фото - 20%
+                                            </div>
+
+                                        </li>
+
+                                        <li>
+
+                                            <div class="li-content">
+
+                                                <h4> ОПУБЛИКУЙ СВОЁ ФОТО С ПЕЧАТНОЙ ПРОДУКЦИЕЙ RE . </h4>
+
+                                                Если ты переживал конец света, игрался инструментами, химичил, проходил
+                                                лабиринты, орудовал плёткой, взбадривал и приводил свой маркетинг в
+                                                порядок
+                                                на предыдущих Re – докажи. Опубликуй фотографию с хештегом
+                                                #спасательбрендов, на которой ты держишь в руках печатную продукцию Re,
+                                                и получи скидку 10 %
+                                            </div>
+
+                                        </li>
+
+                                        <li>
+
+                                            <div class="li-content">
+
+                                                <h4> ПРИХОДИ НЕ ОДИН </h4>
+
+                                                А с кем-то ещё. Минимум с двумя. На компании от 3ёх человек действует
+                                                корпоративная скидка – 10% от суммы.
+
+                                            </div>
+                                        </li>
+
+
+                                    </ol>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- === REGISTRATION === -->
+
+
+        <section class="registration">-->
+
+            <div class="container">
+                <div class="row row-flex">
+
+                    <div class="registration__social col-sm-2 col-md-3">
+
+                        <a class="ripple" href="https://www.facebook.com/Remarketing.ua/">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="ripple" href="https://www.instagram.com/remarketing.festival/">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="registration-form col-sm-10 col-md-7">
+
+                        <div class="registration__title">
+
+                            <h2>РЕГИСТРАЦИЯ</h2>
+
+                            <div class="sub-title">Premier Palace Hotel Kharkiv<br>пр. Правды, 2, Харьков</div>
+
+                        </div>
+
+                        <form action="callback.php" method="post" id="registrationForm">
+
+                            <input type="text" class="form-control" name="name" required="required" placeholder="ФИО">
+                            <input type="email" class="form-control" name="email" required="required"
+                                placeholder="email">
+                            <input type="text" class="form-control" name="phone" required="required"
+                                placeholder="телефон">
+                            <input type="text" class="form-control" name="company" required="required"
+                                placeholder="компания">
+                            <input type="text" class="form-control promo-input" name="promo" placeholder="промокод">
+                            <input type="hidden" name="count" value="1" />
+                            <input type="hidden" name="price" value="" />
+                            <div class="tickets-title">кол-во билетов</div>
+
+                            <div class="tickets">
+
+                                <div class="tickets-calc">
+
+                                    <div class="plus-minus">
+
+                                        <div class="tickets-minus"> - </div>
+
+                                        <div class="tickets-quantity"> 1 </div>
+
+                                        <div class="tickets-plus"> + </div>
+
+                                        <input type="hidden" class="promoFlag" value="false">
+
+                                    </div>
+
+                                    <div class="tickets-equally"> = </div>
+
+                                    <div class="tickets-value">
+                                        750
+                                    </div>
+
+                                </div>
+
+                                <button class="ripple" type="submit">КУПИТЬ БИЛЕТ</button>
+
+                            </div>
+
+                        </form>
+
+                        <div class="registration-warning">Приобретенные билеты обмену и возврату не подлежат!</div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- === PARTNERS === -->
+
+
+        <section class="main-partners">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-title col-xs-12">
+
+                        <h2>ПАРТНЕРЫ</h2>
+                        <div class="sub-title">лучшие компании всей Украины</div>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-2">
+
+                        <a href="http://bbdo.ua/">
+
+                            <div class="partner_name">
+                                креативный партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/svg-png/partners_BBDO.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-4">
+
+                        <a href="http://www.yaposhka.kh.ua/">
+
+                            <div class="partner_name">
+                                генеральный партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/svg-png/partners_Yaposhka.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-4">
+
+                        <a href="https://klmgroup.com.ua/">
+
+                            <div class="partner_name">
+                                организатор
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/svg-png/partners_Leading.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-2">
+
+                        <a href="http://gladhead.com/">
+
+                            <div class="partner_name">
+                                дизайн партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/svg-png/partners_GladHead.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-2">
+
+                        <a href="http://www.studiomarka.com/">
+
+                            <div class="partner_name">
+                                диджитал партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/svg-png/partners_Marka.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-4">
+
+                        <a href="http://www.zebra.kh.ua/">
+
+                            <div class="partner_name">
+                                генеральный полиграфический партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/svg-png/zebra.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-4">
+
+                        <a href="http://pushkin-mafia.com/">
+
+                            <div class="partner_name">
+                                партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/P_M.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-partners__item col-xs-6 col-sm-4 col-md-2">
+
+                        <a href="http://25.biz.ua/">
+
+                            <div class="partner_name">
+                                кофе партнер
+                            </div>
+
+                            <div class="partner_img">
+                                <img src="images/25CR_logo.png" alt="">
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- ======= CONTENT END ======= -->
+
+
+    <!-- Footer -->
+
+
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="footer-top__img footer-top__helicopter col-sm-4">
+                        <img src="images/svg-png/footer_helicopter.png" alt="">
+                    </div>
+
+                    <div class="footer-top__img footer-top__car hidden-xs col-sm-4">
+                        <img src="images/svg-png/footer-car.png" alt="">
+
+                    </div>
+
+                    <div class="footer-top__img footer-top__ship hidden-xs col-sm-4">
+                        <img src="images/svg-png/footer-ship.png" alt="">
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="footer-top__contact col-sm-6 col-md-3">
+
+                        <div class="footer-top__contact_phone">
+                            050-40-07-500
+                        </div>
+
+                        <div class="footer-top__contact_desc">
+                            Александр Ивченко – по вопросам
+                            спонсорства
+                            <div class="footer-top__email">alek.ivchenko@gmail.com</div>
+                        </div>
+
+                    </div>
+
+                    <div class="footer-top__contact col-sm-6 col-md-3">
+
+                        <div class="footer-top__contact_phone">
+                            095-545-15-30
+                        </div>
+
+                        <div class="footer-top__contact_desc">
+                            Элина Гудыма – по вопросам
+                            медиапартнёрства
+                            <div class="footer-top__email">elinagudyma@gmail.com</div>
+                        </div>
+
+                    </div>
+
+                    <div class="footer-top__contact col-sm-6 col-md-3">
+
+                        <div class="footer-top__contact_phone">
+                            095-531-97-42
+                        </div>
+
+                        <div class="footer-top__contact_desc">
+                            Юлия Михайленко – по вопросам
+                            партнёрства
+                            <div class="footer-top__email">mihailenkoj@gmail.com</div>
+                        </div>
+
+                    </div>
+
+                    <div class="footer-top__contact col-sm-6 col-md-3">
+
+                        <div class="footer-top__contact_phone">
+                            050-498-09-88
+                        </div>
+
+                        <div class="footer-top__contact_desc">
+                            Марина Васильева – по вопросам
+                            участия
+                            <div class="footer-top__email">remarketing.kh@gmail.com</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-partners">
+            <div class="container">
+                <div class="row row-flex">
+
+                    <div class="footer-partner col-xs-6 col-sm-4 col-md-2">
+                        <a href="http://bbdo.ua/">
+                            <div class="footer-partner__img">
+                                <img src="images/svg-png/footer_BBDO.png" alt="">
+                            </div>
+                            <div class="footer-partner__name">
+                                креативный партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footer-partner col-xs-6  col-sm-4 col-md-2">
+                        <a href="http://www.yaposhka.kh.ua/">
+                            <div class="footer-partner__img">
+                                <img src="images/svg-png/footer_Yaposhka.png" alt="">
+                            </div>
+                            <div class="footer-partner__name">
+                                генеральный партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footer-partner col-xs-6  col-sm-4 col-md-2">
+                        <a href="https://klmgroup.com.ua/">
+                            <div class="footer-partner__img">
+                                <img src="images/svg-png/footer_Leading.png" alt="">
+                            </div>
+                            <div class="footer-partner__name">
+                                организатор
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footer-partner col-xs-6 col-sm-4 col-md-2">
+                        <a href="http://gladhead.com/">
+                            <div class="footer-partner__img">
+                                <img src="images/svg-png/footer_GleadHead.png" alt="">
+                            </div>
+                            <div class="footer-partner__name">
+                                дизайн партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footer-partner col-xs-12 col-sm-4 col-md-2">
+                        <a href="http://www.studiomarka.com/">
+                            <div class="footer-partner__img">
+                                <img src="images/svg-png/footer_Marka.png" alt="">
+                            </div>
+                            <div class="footer-partner__name">
+                                диджитал партнер
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="footer-partner col-xs-12 col-sm-4 col-md-2">
+                        <a href="http://www.zebra.kh.ua/">
+                            <div class="footer-partner__img">
+                                <img src="images/svg-png/zebra.png" alt="">
+                            </div>
+                            <div class="footer-partner__name">
+                                генеральный полиграфический партнер
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="footer-bottom__social col-sm-4 col-md-6">
+                        <a class="ripple" href="https://www.facebook.com/Remarketing.ua/">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a class="ripple" href="https://www.instagram.com/remarketing.festival/">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="footer-bottom__design col-sm-4 col-md-3">
+                        <span>дизайн сайта –</span><br />
+                        <a href="http://gladhead.com/">
+                            design studio Glad Head
+                        </a>
+                    </div>
+
+                    <div class="footer-bottom__powered col-sm-4 col-md-3">
+                        <span>разработка сайта –</span><br />
+                        <a href="http://www.studiomarka.com/">
+                            web studio Marka.
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer end-->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/MockupSlideshow/js/modernizr.custom.js"></script>
+    <script src="js/MockupSlideshow/js/classie.js"></script>
+    <script src="js/MockupSlideshow/js/main.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

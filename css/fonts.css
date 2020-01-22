@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Roboto_Regular';
+  src: url('../fonts/Roboto_Regular/Roboto-Regular.eot');
+  src: url('../fonts/Roboto_Regular/Roboto-Regular.eot') format('embedded-opentype'),
+  url('../fonts/Roboto_Regular/Roboto-Regular.woff') format('woff'),
+  url('../fonts/Roboto_Regular/Roboto-Regular.ttf') format('truetype'),
+  url('../fonts/Roboto_Regular/Roboto-Regular.svg#Roboto-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto_Thin';
+  src: url('../fonts/Roboto_Thin/Roboto-Thin.eot');
+  src: url('../fonts/Roboto_Thin/Roboto-Thin.eot') format('embedded-opentype'),
+  url('../fonts/Roboto_Thin/Roboto-Thin.woff') format('woff'),
+  url('../fonts/Roboto_Thin/Roboto-Thin.ttf') format('truetype'),
+  url('../fonts/Roboto_Thin/Roboto-Thin.svg#Roboto-Thin') format('svg');
+}
+
+@font-face {
+  font-family: 'OpenSans_Bold';
+  src: url('../fonts/OpenSans_Bold/OpenSans-Bold.eot');
+  src: url('../fonts/OpenSans_Bold/OpenSans-Bold.eot') format('embedded-opentype'),
+  url('../fonts/OpenSans_Bold/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans_Bold/OpenSans-Bold.ttf') format('truetype'),
+  url('../fonts/OpenSans_Bold/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+}
+
